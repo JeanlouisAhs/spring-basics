@@ -7,7 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBasicsApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBasicsApplication.class, args);
-    }
+        BinarySearchImpl binarySearch = new BinarySearchImpl(new QuickSortAlgorithm() );
+        int result =  binarySearch.binarySearch(new int[]{12,3,7}, 2);
+        System.out.println(result);
 
+        SpringApplication.run(SpringBasicsApplication.class, args);
+
+    }
 }
